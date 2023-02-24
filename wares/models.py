@@ -4,8 +4,8 @@ from django.db import models
 
 class Ware(models.Model):
     name = models.CharField(max_length=100)
-    description = models.TextField
+    description = models.TextField(default="")
     category = models.CharField(max_length=100)
-    price = models.IntegerField
+    price = models.IntegerField(default=0)
     img = models.CharField(max_length=300)
     
