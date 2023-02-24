@@ -18,6 +18,9 @@ from django.urls import path, include
 from rest_framework import routers
 from wares.views import WareViewSet
 
+router = routers.DefaultRouter()
+router.register(r'wares', WareViewSet)
 urlpatterns = [
+    path('', include(router.urls)),
     path('admin/', admin.site.urls),
 ]
